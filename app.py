@@ -14,7 +14,7 @@ app = Flask(__name__)
 def index():
     today = datetime.now()
     dayOnes = today - DAYONE
-    return f"<h1>Day One {dayOnes.days}</h1>"
+    return f"<h1>Day One {dayOnes.days}<br>Game on!</h1>"
 
 
 if __name__ == '__main__':
