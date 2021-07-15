@@ -12,9 +12,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    today = datetime.now()
-    dayOnes = today - DAYONE
-    return render_template('index.html', day=dayOnes.days)
+    return render_template('index.html', day=(datetime.now() - DAYONE).days)
 
 
 if __name__ == '__main__':
