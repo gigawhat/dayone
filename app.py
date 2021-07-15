@@ -2,12 +2,14 @@
 
 from datetime import datetime
 from flask import Flask, render_template
+from flask_compress import Compress
 import os
 
 
 DAYONE = datetime(2019, 11, 1)
 
 app = Flask(__name__)
+Compress(app)
 
 
 @app.route("/")
