@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from datetime import datetime
-from flask import Flask
+from flask import Flask, render_template
 import os
 
 
@@ -14,7 +14,7 @@ app = Flask(__name__)
 def index():
     today = datetime.now()
     dayOnes = today - DAYONE
-    return f"<h1>Day One {dayOnes.days}<br>Game on!</h1>"
+    return render_template('index.html', day=dayOnes.days)
 
 
 if __name__ == '__main__':
