@@ -18,4 +18,5 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
+    debug = True if os.getenv('DEBUG').lower() == 'true' else False
+    app.run(debug=debug, host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
